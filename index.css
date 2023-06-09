@@ -1,0 +1,149 @@
+
+body { 
+    background-color: rgb(15, 13, 16);
+    color:white;
+    /* border: 6px solid white; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ 
+.mesage{
+    /*The CSS margin properties are used to create space around elements, outside of any defined borders */
+    margin:5em 0 3em;
+    text-align:center;
+}
+
+.images{
+      display: flex;
+      /* for using display flex we need a container here Images is 
+      a container inside this direct child will work like a flex element i.e. element appearing from left to right 
+       */
+       /* border: 5px solid red;    */
+
+      justify-content: space-around; 
+      /* harizontal space optimization  */
+      align-items:center;
+      /* vertical space distributed  */
+      text-align: center;
+      height: 200px;
+      /* gives static height so if another images come then it no
+      not change the shape of other thing it appear within 200px */
+
+
+}
+
+/* styyling the images of default appearing stone  */
+
+.computer img ,.player img{
+    width: 85%;
+}
+
+ 
+.points {
+   margin: 2em 0 ;
+   text-align: center;
+}
+
+/* now we want to create some gap between computer -0 -0 players */
+
+.computerpoints{
+    margin-left:2em;
+}
+
+.playerspoints{
+    margin-right:2em;
+}
+
+
+/* Now we are designing options  */
+
+.options{
+     margin-top: 5em;
+     display: flex;
+     justify-content: space-around;
+}
+
+/* design buttons  */
+
+.options button{
+    background-color:black;
+    color: rgb(210, 199, 214);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border:2px solid white;
+    padding: 1em 2em;
+    font-weight: 900px;
+    border-radius: 5px;
+    width: 150px;
+    white-space:nowrap;
+    text-align: center;
+    cursor:pointer;
+    transition: 0.3s all linear;
+}
+
+
+.options button:hover{
+    background-color: rgb(47, 191, 191);
+    color:black;
+    font-size: 17px;
+}
+
+
+/* for shaking  the images  after clicking on their option */
+/* using some animation */
+
+/* first for computer images  */
+
+ /* .stone1{
+    animation: shake 0.8s    linear  ;
+} */
+
+/* when ever any button is click by the user 
+then shakecomputer class will add shakecomputer and vice-verse   */
+ 
+
+.shakecomputer{
+    animation: shakecomputer 0.8s  linear  ;
+}
+.shakeplayer{
+    animation: shakeplayer 0.8s  linear  ;
+}
+@keyframes shakecomputer {
+    0% {
+          transform: rotate(-30deg);
+      }
+      25% { 
+          transform: rotate(30deg);
+      }
+      50% {
+          transform: rotate(-30deg);
+      }
+      75% {
+          transform: rotate(30deg);
+      }
+      100% {
+          transform: rotate(0deg);
+      }
+      
+  }
+
+/* now we are giving this animation to the computers images  */
+
+
+@keyframes shakeplayer {
+    0% {
+          transform: rotate(30deg);
+      }
+      25% { 
+          transform: rotate(-30deg);
+      }
+      50% {
+          transform: rotate(30deg);
+      }
+      75% {
+          transform: rotate(-30deg);
+      }
+      100% {
+          transform: rotate(0deg);
+      }
+      
+  }
